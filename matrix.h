@@ -14,6 +14,7 @@ matrix* creatematrix();
 void printcomplex(matrix* a);
 void printdouble(matrix* a);
 void printint(matrix* a);
+void matrixcopy(matrix*a, matrix*b);
 matrix* enterdouble(matrix* a);
 matrix* enterint(matrix* a);
 matrix* entercomplex(matrix* a);
