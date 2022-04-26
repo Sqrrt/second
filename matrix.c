@@ -203,3 +203,15 @@ void freematrix(matrix* mat){
     }
     free(mat);
 }
+void matrixcopy(matrix* a, matrix* b){
+    if(b->elem != NULL){free(b->elem);};
+    b->elem = calloc(a->m * a->n, a->ringinfo->size);
+    b->ringinfo = a->ringinfo;
+    b->n = a->n;
+    b->m = a->m;
+    for (int i = 0; i < (a->m); i++) {
+        for (int j = 0; j < a->n; j++) {
+            memcpy(b->elem + (j * b->m + i)*b->ringinfo->size, a->elem + (j * a->m + i)*a->ringinfo->size, b->ringinfo->size);
+        }
+    }
+}
