@@ -20,7 +20,7 @@ int menuint(){
     b->ringinfo = ringinfo;
     c->ringinfo = ringinfo;
     while(1) {
-        printf("what do you want?\n 1)create 1st matrix\n 2)create 2nd matrix\n 3)plusmatrix (1st + 2nd)\n 4)mult (1st * 2nd)\n 5)transpon\n 6)plus lk\n 7)print\n 8)change 1st and 2nd\n 9)exit\n");
+        printf("what do you want?\n 1)create 1st matrix\n 2)create 2nd matrix\n 3)plusmatrix (1st + 2nd)\n 4)mult (1st * 2nd)\n 5)transpon\n 6)plus lk\n 7)print\n 8)change 1st and 2nd\n 9)copy result to a\n 10)exit\n");
         scanf("%d", &ii);
         switch (ii) {
             case 1:
@@ -86,9 +86,13 @@ int menuint(){
                 b = d;
                 break;
             case 9:
-                freematrix(a);
-                freematrix(b);
-                freematrix(c);
+                matrixcopy(c,a);
+                break;
+            case 10:
+                if(a){freematrix(a);}
+                if(b){freematrix(b);}
+                if(c){freematrix(c);}
+                if(d){freematrix(d);}
                 return 0;
         }
     }
@@ -108,7 +112,7 @@ int menudouble(){
     b->ringinfo = ringinfo;
     c->ringinfo = ringinfo;
     while (1) {
-        printf("what do you want?\n 1)create 1st matrix\n 2)create 2nd matrix\n 3)plusmatrix (1st + 2nd)\n 4)mult (1st * 2nd)\n 5)transpon\n 6)plus lk\n 7)print\n 8)change 1st and 2nd\n 9)exit\n");
+        printf("what do you want?\n 1)create 1st matrix\n 2)create 2nd matrix\n 3)plusmatrix (1st + 2nd)\n 4)mult (1st * 2nd)\n 5)transpon\n 6)plus lk\n 7)print\n 8)change 1st and 2nd\n 9)copy result to a\n 10)exit\n");
         scanf("%d", &kk);
         switch (kk) {
             case 1:
@@ -173,9 +177,13 @@ int menudouble(){
                 b = d;
                 break;
             case 9:
-                freematrix(a);
-                freematrix(b);
-                freematrix(c);
+                matrixcopy(c,a);
+                break;
+            case 10:
+                if(a){freematrix(a);}
+                if(b){freematrix(b);}
+                if(c){freematrix(c);}
+                if(d){freematrix(d);}
                 return 0;
         }
     }
@@ -195,7 +203,7 @@ int menucomplex(){
     b->ringinfo = ringinfo;
     c->ringinfo = ringinfo;
     while(1) {
-        printf("what do you want?\n 1)create 1st matrix\n 2)create 2nd matrix\n 3)plusmatrix (1st + 2nd)\n 4)mult (1st * 2nd)\n 5)transpon\n 6)plus lk\n 7)print\n 8)change 1st and 2nd\n 9)exit");
+        printf("what do you want?\n 1)create 1st matrix\n 2)create 2nd matrix\n 3)plusmatrix (1st + 2nd)\n 4)mult (1st * 2nd)\n 5)transpon\n 6)plus lk\n 7)print\n 8)change 1st and 2nd\n 9)copy result to a\n 10)exit");
         scanf("%d", &cc);
         switch (cc) {
             case 1:
@@ -261,9 +269,13 @@ int menucomplex(){
                 b = d;
                 break;
             case 9:
-                freematrix(a);
-                freematrix(b);
-                freematrix(c);
+                matrixcopy(c,a);
+                break;
+            case 10:
+                if(a){freematrix(a);}
+                if(b){freematrix(b);}
+                if(c){freematrix(c);}
+                if(d){freematrix(d);}
                 return 0;
         }
     }
